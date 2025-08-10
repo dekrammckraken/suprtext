@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'aniread'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=aniread",
+                    "--package=aniread"
+                ],
+                "filter": {
+                    "name": "aniread",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-c", "10"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'aniread'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=aniread",
+                    "--package=aniread"
+                ],
+                "filter": {
+                    "name": "aniread",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
